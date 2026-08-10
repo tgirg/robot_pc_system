@@ -1,0 +1,226 @@
+field:
+  name: F3RC2026公式フィールド
+  width_mm: 4500
+  height_mm: 2400
+  tolerance_percent: 5
+  floor_material: green_lonleum
+  coordinate_system: top_left_origin_x_right_y_down
+  source_note: "公式図面から読み取り。要実測確認"
+
+wood:
+  width_mm: 38
+  height_mm: 89
+  source_note: "公式仕様値"
+
+tape:
+  normal_width_mm: 19
+  warehouse_b_orange_width_mm: 38
+  source_note: "公式仕様値"
+
+zones:
+  - name: warehouse_a
+    label_ja: 倉庫Aゾーン
+    rect: {x_mm: 0, y_mm: 0, width_mm: 1000, height_mm: 750}
+    color: "#7dd3fc"
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: warehouse_b
+    label_ja: 倉庫Bゾーン
+    rect: {x_mm: 0, y_mm: 750, width_mm: 1000, height_mm: 710}
+    color: "#fdba74"
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: warehouse_c
+    label_ja: 倉庫Cゾーン
+    rect: {x_mm: 0, y_mm: 1460, width_mm: 1000, height_mm: 940}
+    color: "#86efac"
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: walkway
+    label_ja: 遊歩道ゾーン
+    rect: {x_mm: 1000, y_mm: 0, width_mm: 2300, height_mm: 2400}
+    color: "#bbf7d0"
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: garden
+    label_ja: 庭ゾーン
+    rect: {x_mm: 3300, y_mm: 0, width_mm: 1200, height_mm: 2400}
+    color: "#22c55e"
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r1_start
+    label_ja: R1スタートゾーン
+    rect: {x_mm: 1800, y_mm: 0, width_mm: 600, height_mm: 600}
+    color: "#93c5fd"
+    priority: 20
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r2_start
+    label_ja: R2スタートゾーン
+    rect: {x_mm: 1800, y_mm: 1800, width_mm: 600, height_mm: 600}
+    color: "#93c5fd"
+    priority: 20
+    source_note: "公式図面から読み取り。要実測確認"
+
+robots:
+  r1:
+    display_name: "R1"
+    start_x_mm: 2100
+    start_y_mm: 300
+    start_theta_deg: 0
+    start_zone: "r1_start"
+    color: "#38bdf8"
+    source_note: "公式図面から読み取り。要実測確認"
+  r2:
+    display_name: "R2"
+    start_x_mm: 2100
+    start_y_mm: 2100
+    start_theta_deg: 0
+    start_zone: "r2_start"
+    color: "#f97316"
+    source_note: "公式図面から読み取り。要実測確認"
+
+objects:
+  - name: sample_object_a
+    label_ja: 配置確認オブジェクトA
+    rect: {x_mm: 2650, y_mm: 1050, width_mm: 180, height_mm: 180}
+    color: "#facc15"
+    kind: "generic"
+    source_note: "暫定。公式図面または実測で要確認"
+  - name: black_brick_default
+    label_ja: 黒レンガ
+    rect: {x_mm: 2820, y_mm: 820, width_mm: 240, height_mm: 120}
+    color: "#111827"
+    kind: "black_brick"
+    source_note: "暫定。公式図面または実測で要確認"
+  - name: white_brick_default
+    label_ja: 白レンガ
+    rect: {x_mm: 2820, y_mm: 1220, width_mm: 240, height_mm: 120}
+    color: "#f8fafc"
+    kind: "white_brick"
+    source_note: "暫定。公式図面または実測で要確認"
+  - name: watering_can_default
+    label_ja: じょうろ
+    rect: {x_mm: 3600, y_mm: 860, width_mm: 220, height_mm: 180}
+    color: "#38bdf8"
+    kind: "watering_can"
+    source_note: "暫定。公式図面または実測で要確認"
+
+lines:
+  - name: blue_line_r1_start
+    label_ja: 青ライン R1スタート
+    color: "#2563eb"
+    width_mm: 19
+    points: [[1800, 0], [2400, 0], [2400, 600], [1800, 600], [1800, 0]]
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: blue_line_r2_start
+    label_ja: 青ライン R2スタート
+    color: "#2563eb"
+    width_mm: 19
+    points: [[1800, 1800], [2400, 1800], [2400, 2400], [1800, 2400], [1800, 1800]]
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: white_line_garden_boundary
+    label_ja: 白ライン 庭境界
+    color: "#f8fafc"
+    width_mm: 19
+    points: [[3300, 0], [3300, 2400]]
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: white_line_walkway_boundary
+    label_ja: 白ライン 遊歩道境界
+    color: "#f8fafc"
+    width_mm: 19
+    points: [[1000, 0], [1000, 2400]]
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: red_line_warehouse_b_lower
+    label_ja: 赤ライン 倉庫B下段
+    color: "#dc2626"
+    width_mm: 19
+    points: [[0, 1460], [1000, 1460]]
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: orange_line_warehouse_b
+    label_ja: 橙ライン 倉庫B外周
+    color: "#f97316"
+    width_mm: 38
+    points: [[0, 750], [1000, 750], [1000, 1460], [0, 1460], [0, 750]]
+    source_note: "公式図面から読み取り。要実測確認"
+
+walls:
+  - name: outer_frame_top
+    group: outer_frame
+    label_ja: 外枠 上
+    rect: {x_mm: 0, y_mm: 0, width_mm: 4500, height_mm: 38}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: outer_frame_bottom
+    group: outer_frame
+    label_ja: 外枠 下
+    rect: {x_mm: 0, y_mm: 2362, width_mm: 4500, height_mm: 38}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: outer_frame_left
+    group: outer_frame
+    label_ja: 外枠 左
+    rect: {x_mm: 0, y_mm: 0, width_mm: 38, height_mm: 2400}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: outer_frame_right
+    group: outer_frame
+    label_ja: 外枠 右
+    rect: {x_mm: 4462, y_mm: 0, width_mm: 38, height_mm: 2400}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: divider_warehouse_walkway
+    group: inner_dividers
+    label_ja: 倉庫/遊歩道境界
+    rect: {x_mm: 1000, y_mm: 0, width_mm: 38, height_mm: 2400}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: divider_walkway_garden
+    group: inner_dividers
+    label_ja: 遊歩道/庭境界
+    rect: {x_mm: 3300, y_mm: 0, width_mm: 38, height_mm: 2400}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: warehouse_a_b_partition
+    group: warehouse_partitions
+    label_ja: 倉庫A/B境界
+    rect: {x_mm: 0, y_mm: 750, width_mm: 1000, height_mm: 38}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: warehouse_b_c_partition
+    group: warehouse_partitions
+    label_ja: 倉庫B/C境界
+    rect: {x_mm: 0, y_mm: 1460, width_mm: 1000, height_mm: 38}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: warehouse_b_vertical_1
+    group: warehouse_partitions
+    label_ja: 倉庫B棚 縦1
+    rect: {x_mm: 301, y_mm: 750, width_mm: 38, height_mm: 710}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: warehouse_b_vertical_2
+    group: warehouse_partitions
+    label_ja: 倉庫B棚 縦2
+    rect: {x_mm: 641, y_mm: 750, width_mm: 38, height_mm: 710}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: warehouse_b_horizontal_1
+    group: warehouse_partitions
+    label_ja: 倉庫B棚 横1
+    rect: {x_mm: 0, y_mm: 1105, width_mm: 1000, height_mm: 38}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r1_start_frame_left
+    group: inner_dividers
+    label_ja: R1スタート枠 左
+    rect: {x_mm: 1800, y_mm: 0, width_mm: 38, height_mm: 600}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r1_start_frame_right
+    group: inner_dividers
+    label_ja: R1スタート枠 右
+    rect: {x_mm: 2362, y_mm: 0, width_mm: 38, height_mm: 600}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r1_start_frame_bottom
+    group: inner_dividers
+    label_ja: R1スタート枠 下
+    rect: {x_mm: 1800, y_mm: 562, width_mm: 600, height_mm: 38}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r2_start_frame_left
+    group: inner_dividers
+    label_ja: R2スタート枠 左
+    rect: {x_mm: 1800, y_mm: 1800, width_mm: 38, height_mm: 600}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r2_start_frame_right
+    group: inner_dividers
+    label_ja: R2スタート枠 右
+    rect: {x_mm: 2362, y_mm: 1800, width_mm: 38, height_mm: 600}
+    source_note: "公式図面から読み取り。要実測確認"
+  - name: r2_start_frame_top
+    group: inner_dividers
+    label_ja: R2スタート枠 上
+    rect: {x_mm: 1800, y_mm: 1800, width_mm: 600, height_mm: 38}
+    source_note: "公式図面から読み取り。要実測確認"

@@ -1,0 +1,46 @@
+app:
+  title: "R2 / NHK ロボット制御ダッシュボード"
+  update_interval_ms: 100
+
+mode:
+  use_mock: false
+  use_simulation: true
+  use_real_hardware: false
+
+serial:
+  port: "COM10"
+  baudrate: 115200
+  timeout: 0.05
+  mock: true
+  reconnect_interval_ms: 2000
+
+camera:
+  index: 0
+  width: 640
+  height: 360
+  mock: true
+
+sensors:
+  mock: true
+  lidar_min_m: 0.35
+  lidar_max_m: 3.0
+
+field:
+  width_mm: 3000
+  height_mm: 2000
+  grid_size_mm: 100
+
+simulation:
+  enabled: true
+  update_interval_ms: 50
+  robot_speed_mm_s: 200
+  turn_speed_deg_s: 60
+
+display:
+  show_mock_values: true
+  label_mock_values: true
+  hide_mock_values_when_disconnected: false
+
+logging:
+  enabled_on_start: false
+  directory: "logs"

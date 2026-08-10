@@ -1,0 +1,112 @@
+﻿app:
+  title: "R2 / NHK ロボット制御ダッシュボード"
+  update_interval_ms: 100
+
+mode:
+  use_mock: true
+  use_simulation: true
+  use_real_hardware: false
+
+communication:
+  default_mode: "usb"
+  usb:
+    port: "COM6"
+    baudrate: 115200
+  wireless:
+    enabled: false
+    host: "192.168.4.1"
+    port: 5000
+
+controllers:
+  drive:
+    enabled: true
+    type: "esp32"
+    connection: "usb"
+    port: "COM6"
+    baudrate: 115200
+  arm:
+    enabled: false
+    type: "esp32"
+    connection: "usb"
+    port: "COM11"
+    baudrate: 115200
+  tool:
+    enabled: false
+    type: "esp32"
+    connection: "usb"
+    port: "COM12"
+    baudrate: 115200
+  sensor:
+    enabled: false
+    type: "esp32"
+    connection: "usb"
+    port: "COM13"
+    baudrate: 115200
+
+serial:
+  port: "COM6"
+  baudrate: 115200
+  timeout: 0.05
+  mock: true
+  reconnect_interval_ms: 2000
+
+camera:
+  index: 0
+  width: 640
+  height: 360
+  mock: true
+
+sensors:
+  mock: true
+  lidar_min_m: 0.35
+  lidar_max_m: 3.0
+
+field:
+  width_mm: 4500
+  height_mm: 2400
+  grid_size_mm: 100
+
+simulation:
+  enabled: true
+  update_interval_ms: 50
+  robot_speed_mm_s: 200
+  turn_speed_deg_s: 60
+  start_x_mm: 2100
+  start_y_mm: 2100
+  start_theta_deg: 0
+  obstacles:
+    - id: wall_1
+      label: "障害物1"
+      x_mm: 1000
+      y_mm: 600
+      width_mm: 300
+      height_mm: 200
+    - id: planter_mock
+      label: "仮プランター"
+      x_mm: 1200
+      y_mm: 900
+      width_mm: 400
+      height_mm: 250
+
+safety:
+  command_timeout_ms: 500
+  stop_on_disconnect: true
+  esc_emergency_stop: true
+
+auto_drive:
+  enabled: false
+  mode: "rule_based"
+  forward_speed: 100
+  turn_speed: 80
+  front_stop_distance_mm: 400
+  side_preference_margin_mm: 100
+  command_interval_ms: 300
+
+display:
+  show_mock_values: true
+  label_mock_values: true
+  hide_mock_values_when_disconnected: false
+
+logging:
+  enabled_on_start: false
+  directory: "logs"

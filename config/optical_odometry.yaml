@@ -1,0 +1,12 @@
+enabled: true
+i2c_address: "0x17"
+scale_x_mm_per_count: 0.30517578125
+scale_y_mm_per_count: 0.30517578125
+invert_x: false
+invert_y: false
+swap_xy: false
+deadband_counts: 0
+max_delta_counts: 500
+stale_timeout_ms: 1000
+coordinate_mode: robot_relative
+source_note: "SparkFun Qwiic Optical Tracking Odometry Sensor / PAA5160E1 register 0x20 position count. 10000 mm / 32768 count."

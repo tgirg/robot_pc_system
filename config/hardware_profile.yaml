@@ -1,0 +1,46 @@
+board:
+  name: ESP32
+  fqbn: esp32:esp32:esp32
+  port: COM6
+  baudrate: 115200
+imu:
+  enabled: false
+  type: dummy
+  communication: i2c
+  sda_pin: null
+  scl_pin: null
+  voltage: 3.3V
+  notes: 実IMU接続前
+lidar:
+  enabled: false
+  type: null
+  communication: unknown
+  uart_rx_pin: null
+  uart_tx_pin: null
+  i2c_sda_pin: null
+  i2c_scl_pin: null
+  voltage: unknown
+  notes: 実LiDARの型番確認待ち
+motor_driver:
+  enabled: false
+  model: unknown
+  left_pwm_pin: null
+  left_dir_pin: null
+  right_pwm_pin: null
+  right_dir_pin: null
+  standby_pin: null
+  voltage_motor: unknown
+  voltage_logic: 3.3V or 5V
+  notes: MOTOR_OUTPUT_ENABLED 0 のまま
+encoder:
+  enabled: false
+  left_a_pin: null
+  left_b_pin: null
+  right_a_pin: null
+  right_b_pin: null
+  pulses_per_rev: null
+  notes: 未接続
+actuator:
+  enabled: false
+  type: none
+  notes: アーム・ポンプ等は後で追加
