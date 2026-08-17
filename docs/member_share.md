@@ -2,6 +2,21 @@
 
 このプロジェクトはGitHubなどのGitリポジトリで共有します。メンバーはリポジトリを取得して、CodexまたはVS Codeで開けば同じ構成で開発できます。
 
+現在の共有先:
+
+```text
+https://github.com/tgirg/robot_pc_system.git
+```
+
+中身を知りたいメンバーは、まず次の順番で読んでください。
+
+1. `README.md`
+2. `docs/member_start.md`
+3. `docs/feature_summary.md`
+4. `docs/sensor_flow.md`
+5. `docs/esp32_sketches.md`
+6. `docs/codex_workflow.md`
+
 ## 共有する側
 
 1. GitHubで新しいリポジトリを作成します。
@@ -82,4 +97,3 @@ COMポートは接続するPCごとに変わります。`COM10` とは限りま�
 - Arduino IDEのシリアルモニタとアプリのシリアルモニタは同じCOMポートを同時に使えません。
 - ログやビルドキャッシュは共有しません。
 - センサ未接続時の値は0表示を基本にします。
-
