@@ -15,7 +15,24 @@ https://github.com/tgirg/robot_pc_system.git
 3. `docs/feature_summary.md`
 4. `docs/sensor_flow.md`
 5. `docs/esp32_sketches.md`
-6. `docs/codex_workflow.md`
+6. `docs/team_collaboration.md`
+7. `docs/codex_workflow.md`
+
+## 相手の最新版に追加する流れ
+
+作業を始める前に、最新版から作業ブランチを作ります。
+
+```cmd
+tools\team_start_feature.bat feature/作業名
+```
+
+作業後、変更をGitHubへ送ります。
+
+```cmd
+tools\team_publish_feature.bat "変更内容"
+```
+
+詳しくは `docs/team_collaboration.md` を参照してください。
 
 ## 共有する側
 
