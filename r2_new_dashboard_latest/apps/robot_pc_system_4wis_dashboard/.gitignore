@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local app state
+logs/
+backups/
+ui_startup_stdout.txt
+ui_startup_stderr.txt
+config/local_settings.json
+config/hardware_profile.yaml.bak_*
+
+# Build/cache output
+build/
+dist/
+*.egg-info/
+
+# Arduino build output
+*.elf
+*.bin
+*.map
+*.hex
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,54 @@
+app:
+  title: "R2 / NHK ロボット制御ダッシュボード"
+  update_interval_ms: 100
+
+mode:
+  use_mock: false
+  use_simulation: false
+  use_real_hardware: true
+
+communication:
+  default_mode: "usb"
+  usb:
+    port: "COM10"
+    baudrate: 115200
+
+controllers:
+  drive:
+    enabled: true
+    type: "esp32"
+    connection: "usb"
+    port: "COM10"
+    baudrate: 115200
+
+serial:
+  port: "COM10"
+  baudrate: 115200
+  timeout: 0.05
+  mock: false
+  reconnect_interval_ms: 2000
+
+camera:
+  index: 0
+  width: 640
+  height: 360
+  mock: false
+
+sensors:
+  mock: false
+  lidar_min_m: 0.35
+  lidar_max_m: 3.0
+
+display:
+  show_mock_values: false
+  label_mock_values: true
+  hide_mock_values_when_disconnected: true
+
+safety:
+  command_timeout_ms: 500
+  stop_on_disconnect: true
+  esc_emergency_stop: true
+
+logging:
+  enabled_on_start: false
+  directory: "logs"

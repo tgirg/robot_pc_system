@@ -1,0 +1,28 @@
+{
+  "master_enabled": true,
+  "master_volume": 0.55,
+  "operation_enabled": true,
+  "connection_enabled": true,
+  "warning_enabled": true,
+  "event_enabled": {
+    "startup_complete": true,
+    "device_connected": true,
+    "device_disconnected": true,
+    "controller_connected": true,
+    "controller_disconnected": true,
+    "communication_test_pass": true,
+    "start_ready": true,
+    "start_ready_10s": true,
+    "start": true,
+    "safe": true,
+    "arm": true,
+    "fail": true,
+    "timeout_relock": true,
+    "settings_saved": true,
+    "settings_save_failed": true,
+    "warning": true,
+    "critical": true,
+    "limit_switch": true,
+    "operation_rejected": true
+  }
+}

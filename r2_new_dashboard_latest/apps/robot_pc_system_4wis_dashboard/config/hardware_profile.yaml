@@ -1,0 +1,46 @@
+board:
+  name: Freenove ESP32-WROOM / MCB44 v29
+  fqbn: esp32:esp32:esp32
+  port: COM7
+  baudrate: 115200
+imu:
+  enabled: false
+  type: dummy
+  communication: i2c
+  sda_pin: null
+  scl_pin: null
+  voltage: 3.3V
+  notes: 実IMU接続前
+lidar:
+  enabled: false
+  type: null
+  communication: unknown
+  uart_rx_pin: null
+  uart_tx_pin: null
+  i2c_sda_pin: null
+  i2c_scl_pin: null
+  voltage: unknown
+  notes: 実LiDARの型番確認待ち
+motor_driver:
+  enabled: false
+  model: MCB44 v29 four-wheel independent steering
+  left_pwm_pin: null
+  left_dir_pin: null
+  right_pwm_pin: null
+  right_dir_pin: null
+  standby_pin: null
+  voltage_motor: 12V candidate
+  voltage_logic: 3.3V ESP32 logic
+  notes: The dashboard's legacy DRIVE VEL path is not the live v29 JSON protocol. The copied 4WIS tab has a guarded v29 one-shot adapter; use run-pc-controller.cmd for continuous joystick driving.
+encoder:
+  enabled: false
+  left_a_pin: null
+  left_b_pin: null
+  right_a_pin: null
+  right_b_pin: null
+  pulses_per_rev: 8192
+  notes: Existing v29 config uses four AMT102-style encoder channels through ESP32 telemetry, not this dashboard's left/right encoder model.
+actuator:
+  enabled: false
+  type: PCA9685 steering servos
+  notes: Existing servo channels are FL=6, FR=5, RL=7, RR=4 with calibrated centers in config/vehicle_config.json.

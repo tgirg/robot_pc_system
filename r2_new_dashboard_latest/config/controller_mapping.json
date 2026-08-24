@@ -1,0 +1,31 @@
+{
+  "axis_vx": 1,
+  "axis_vy": 0,
+  "axis_omega": 2,
+  "logical_front": "REAR",
+  "invert_vx": true,
+  "invert_vy": false,
+  "invert_omega": true,
+  "pivot_motor_direction_inverted": [
+    true,
+    true,
+    false,
+    false
+  ],
+  "deadzone": 0.12,
+  "arm_buttons": [
+    9,
+    10,
+    0
+  ],
+  "arm_hold_seconds": 1.0,
+  "safe_button": 6,
+  "mode_button": 8,
+  "debug_select_buttons": [
+    13,
+    14
+  ],
+  "debug_execute_button": 1,
+  "linear_scale": 0.12,
+  "angular_scale": 0.35
+}

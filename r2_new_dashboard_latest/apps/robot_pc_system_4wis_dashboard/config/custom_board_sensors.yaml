@@ -1,0 +1,68 @@
+board: custom_esp32_sensor_connector_board
+connector_pin_order:
+  - SIG
+  - NC
+  - VCC_3V3
+  - GND
+notes:
+  - NC is not connected.
+  - VCC is 3.3V.
+  - GND is common ground.
+  - SIG is routed to each ESP32 GPIO through the board signal-protection resistor.
+sensors:
+  - name: FL
+    gpio: 13
+    purpose: 前左の距離センサ
+    check_order: 1
+    serial_format: SENSOR,FL,GPIO13,RAW,<value>
+  - name: FR
+    gpio: 14
+    purpose: 前右の距離センサ
+    check_order: 2
+    serial_format: SENSOR,FR,GPIO14,RAW,<value>
+  - name: RR
+    gpio: 27
+    purpose: 右後の距離センサ
+    check_order: 3
+    serial_format: SENSOR,RR,GPIO27,RAW,<value>
+  - name: BR
+    gpio: 26
+    purpose: 後右の距離センサ
+    check_order: 4
+    serial_format: SENSOR,BR,GPIO26,RAW,<value>
+  - name: BL
+    gpio: 25
+    purpose: 後左の距離センサ
+    check_order: 5
+    serial_format: SENSOR,BL,GPIO25,RAW,<value>
+  - name: LB
+    gpio: 33
+    purpose: 左後の距離センサ
+    check_order: 6
+    serial_format: SENSOR,LB,GPIO33,RAW,<value>
+  - name: LF
+    gpio: 32
+    purpose: 左前の距離センサ
+    check_order: 7
+    serial_format: SENSOR,LF,GPIO32,RAW,<value>
+  - name: US1
+    gpio: 35
+    purpose: 超音波センサ1
+    check_order: 8
+    serial_format: ULTRASONIC,US1,GPIO35,DISTANCE_MM,<value>
+    warning: GPIO35 is input-only. One-wire Trigger/Echo ultrasonic sensors cannot be triggered from this pin.
+  - name: US2
+    gpio: 23
+    purpose: 超音波センサ2
+    check_order: 9
+    serial_format: ULTRASONIC,US2,GPIO23,DISTANCE_MM,<value>
+additional_checks:
+  - name: ENCODER
+    purpose: 4輪エンコーダー
+    source: Drive Diagnostic telemetry
+  - name: IMU
+    purpose: 9軸IMU
+    source: IMU serial/I2C test
+  - name: OPTICAL
+    purpose: 光学式オドメトリ
+    source: Optical odometry test
